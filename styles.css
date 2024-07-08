@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 200px; /* Increased width */
+    height: 200px; /* Increased height */
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.header-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about p,
+.job p,
+.project p,
+.contact p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.job,
+.project {
+    background: #f4f4f4;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.job h3,
+.project h3 {
+    margin-top: 0;
+}
+
+.job ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job ul li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.project a:hover {
+    background: #555;
+}
