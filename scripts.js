@@ -1,4 +1,3 @@
-// JavaScript to add styles dynamically
 document.addEventListener('DOMContentLoaded', function () {
     // Add background color to sections
     document.querySelectorAll('section').forEach(function (section) {
@@ -22,5 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add padding to the container
     document.querySelectorAll('.container').forEach(function (container) {
         container.style.padding = '20px';
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });
