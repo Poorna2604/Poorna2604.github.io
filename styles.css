@@ -1,8 +1,12 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -21,6 +25,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px; /* Adjusted margin to move header content below the fixed nav */
 }
 
 .profile-photo {
@@ -52,6 +57,11 @@ nav {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -70,6 +80,12 @@ section {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* To avoid being hidden under the fixed nav */
+    display: none; /* Initially hide all sections */
+}
+
+section.highlight {
+    background-color: #f9f9f9;
 }
 
 section h2 {
@@ -128,33 +144,37 @@ section h2 {
     color: #fff;
 }
 
+.contact p {
+    font-size: 1.2em;
+}
+
+.skills {
+    text-align: center;
+}
+
 .skills ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
-.skills ul li {
-    background: #f4f4f4;
-    margin: 5px 0;
-    padding: 10px;
-    border-left: 5px solid #333;
+.skills li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.contact p {
-    font-size: 1.2em;
+.skills li:hover {
+    background-color: #45a049;
 }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-}
-
-.highlight {
-    background-color: #f0f0f0;
-}
-
-.header-highlight {
-    color: #4CAF50;
+    padding: 10px 0;
 }
