@@ -25,7 +25,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px; /* Adjusted margin to move header content below the fixed nav */
+    margin-top: 40px;
 }
 
 .profile-photo {
@@ -80,8 +80,7 @@ section {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px; /* To avoid being hidden under the fixed nav */
-    display: none; /* Initially hide all sections */
+    margin-top: 40px;
 }
 
 section.highlight {
