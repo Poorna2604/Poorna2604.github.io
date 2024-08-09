@@ -1,0 +1,219 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+nav {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: #007acc;
+}
+
+header {
+    background: linear-gradient(to right, #007acc, #1a1a1a);
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: left;
+    margin-top: 80px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 5px solid #fff;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+section {
+    padding: 60px 0;
+    margin-top: 20px;
+    background: #c0eaee;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about p,
+.job p,
+.project p,
+.contact p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #605f5f;
+}
+
+.job,
+.project {
+    background: #f9f9f9;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #007acc;
+}
+
+.job h3,
+.project h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    color: #007acc;
+    font-size: 1.5em;
+}
+
+.job ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job ul li {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1em;
+    color: #555;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007acc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.project a:hover {
+    background: #005999;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skills li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skills li:hover {
+    background-color: #005999;
+}
+
+.contact p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    background: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background: #005999;
+}
+
+/* Section reveal animations */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
