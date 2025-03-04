@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         section.classList.add('section-hidden');
     });
 
-    // Dark Mode Toggle
+    
     const darkModeToggle = document.getElementById('darkModeToggle');
     darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
