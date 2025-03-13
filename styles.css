@@ -1,7 +1,9 @@
 /* Reset default browser styles */
-body, h1, h2, h3, p, ul, li {
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,8 +22,9 @@ body {
 }
 
 nav {
-    background: #1a1a1a;
-    color: #fff;
+    height: fit-content;
+    background: #f8f8f8;
+    color: #121212;
     padding: 15px 0;
     text-align: center;
     position: fixed;
@@ -33,13 +36,16 @@ nav {
 }
 
 nav .container {
+    margin: 0;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
 }
 
 nav a {
-    color: #fff;
+    color: #121212;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -48,10 +54,26 @@ nav a {
 
 nav a:hover {
     background: #007acc;
+    color: #f9f9f9;
+}
+
+nav .menu-btn {
+    cursor: pointer;
+    padding-inline: 2rem;
+    text-align: right;
+    display: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    filter: invert(1);
+}
+
+#darkModeToggle img {
+    filter: invert(1);
 }
 
 header {
-    background: linear-gradient(to right, #007acc, #1a1a1a);
+    background: #1a1a1a linear-gradient(to right, #007acc, #1a1a1a);
     color: #ffffff;
     padding: 40px 0;
     text-align: left;
@@ -221,11 +243,25 @@ footer {
 /* Dark Mode */
 body.dark-mode {
     background-color: #121212;
-    color: #e0e0e0;
+    /* color: #e0e0e0; */
 }
 
 body.dark-mode nav {
+    color: #f8f8f8;
     background: #222;
+}
+
+body.dark-mode nav a {
+    color: #f8f8f8;
+    /* background: #222; */
+}
+
+body.dark-mode nav #menuBtn img {
+    filter: invert(1);
+}
+
+body.dark-mode nav #darkModeToggle img {
+    filter: invert(0);
 }
 
 body.dark-mode section {
@@ -233,7 +269,11 @@ body.dark-mode section {
     color: #f8f8f8;
 }
 
-body.dark-mode .job, 
+body.dark-mode section h2 {
+    color: #f8f8f8;
+}
+
+body.dark-mode .job,
 body.dark-mode .project {
     background: #2a2a2a;
     border-left-color: #0099ff;
@@ -267,7 +307,7 @@ body.dark-mode footer {
 
 .profile-photo:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Header h1 shadow */
@@ -283,7 +323,7 @@ header h1 {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.scroll-to-top.show {
+.scroll-to-top .show {
     opacity: 1;
     visibility: visible;
 }
@@ -294,9 +334,20 @@ header h1 {
         width: 90%;
     }
 
-    nav .container {
-        flex-wrap: wrap;
+    nav .menu-btn {
+        display: block;
+    }
+
+    nav .container,
+    nav .container .links {
+        display: flex;
+        color: red;
+        flex-direction: column;
         gap: 10px;
+    }
+
+    nav .container .links {
+        display: none;
     }
 
     header h1 {
