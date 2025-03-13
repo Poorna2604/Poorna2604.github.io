@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
     menuBtn.addEventListener('click', () => {
         if(linkContainer.style.display === 'none') {
             linkContainer.style.display = 'flex'
-            menuImg.src = '/Poorna2604.github.io/close.svg'
+            menuImg.src = 'close.svg'
         } else {
             linkContainer.style.display = 'none'
-            menuImg.src = '/Poorna2604.github.io/menu.svg'
+            menuImg.src = 'menu.svg'
             
         }
     })
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
     darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         if(themeToggleImg.src.endsWith('dark_mode.svg')){
-            themeToggleImg.src = '/Poorna2604.github.io/light_mode.svg'
+            themeToggleImg.src = 'light_mode.svg'
         } else {
-            themeToggleImg.src = '/Poorna2604.github.io/dark_mode.svg'
+            themeToggleImg.src = 'dark_mode.svg'
         }
     });
 });

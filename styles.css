@@ -250,13 +250,16 @@ body.dark-mode nav {
     color: #f8f8f8;
     background: #222;
 }
+
 body.dark-mode nav a {
     color: #f8f8f8;
     /* background: #222; */
 }
+
 body.dark-mode nav #menuBtn img {
     filter: invert(1);
 }
+
 body.dark-mode nav #darkModeToggle img {
     filter: invert(0);
 }
