@@ -6,19 +6,23 @@
     <title>My Portfolio Resume</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" href="/Poorna2604.github.io/your-photo.png"> -->
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="container">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-            <button id="darkModeToggle">🌙</button>
+            <button class="menu-btn" id="menuBtn"><img src="/Poorna2604.github.io/menu.svg" alt="menu"></button>
+            <div class="links" id="links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <button id="darkModeToggle"><img src="/Poorna2604.github.io/dark_mode.svg" alt="darkModeToggle"></button>
+            </div>
         </div>
     </nav>
-    <header>
+    <header id="header">
         <div class="container">
             <img src="your-photo.png" alt="Poornaprajna P" class="profile-photo">
             <div class="header-text">
@@ -105,6 +109,7 @@
             <p>&copy; 2024 Poornaprajna P. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
