@@ -1,0 +1,263 @@
+/* Cybersecurity Portfolio Styles */
+body, h1, h2, h3, p, ul, li {
+    margin:0;padding:0;
+}
+
+body {
+    font-family:'Open Sans',sans-serif;
+    line-height:1.6;
+    background-color:#0d1117;
+    color:#e6edf3;
+    scroll-behavior:smooth;
+}
+
+.container{
+    width:70%;
+    margin:auto;
+    overflow:hidden;
+    padding:5px;
+}
+
+nav{
+    background:#161b22;
+    color:#fff;
+    padding:15px 0;
+    text-align:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 2px 4px rgba(0,255,255,0.1);
+}
+
+nav .container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+nav a{
+    color:#00e6ff;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:4px;
+    transition:background 0.3s ease;
+}
+nav a:hover{
+    background:#00e6ff;
+    color:#0d1117;
+}
+
+header{
+    background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:#ffffff;
+    padding:40px 0;
+    text-align:left;
+    margin-top:80px;
+}
+.profile-photo{
+    border-radius:50%;
+    width:280px;
+    height:280px;
+    margin-bottom:20px;
+    object-fit:cover;
+    border:5px solid #00e6ff;
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+
+.profile-photo:hover{
+    transform:scale(1.05);
+    box-shadow:0 4px 15px rgba(0,255,255,0.5);
+}
+
+header h1{
+    font-family:'Montserrat',sans-serif;
+    font-size:3em;
+    margin-bottom:10px;
+    text-shadow:1px 1px 10px #00e6ff;
+}
+
+header p{
+    font-size:1.2em;
+    margin-bottom:10px;
+    font-weight:300;
+}
+
+section{
+    padding:60px 0;
+    margin-top:20px;
+    background:#161b22;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,255,255,0.1);
+}
+
+section h2{
+    font-family:'Montserrat',sans-serif;
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.5em;
+    color:#00e6ff;
+}
+
+.about p,.job p,.project p,.contact p{
+    text-align:center;
+    font-size:1.1em;
+    color:#c9d1d9;
+}
+
+.job,.project{
+    background:#0d1117;
+    margin-bottom:30px;
+    padding:20px;
+    border-radius:8px;
+    border-left:5px solid #00e6ff;
+}
+
+.job h3,.project h3{
+    font-family:'Montserrat',sans-serif;
+    margin-top:0;
+    color:#00e6ff;
+    font-size:1.5em;
+}
+
+.job ul{
+    list-style:none;
+    padding:0;
+}
+
+.job ul li{
+    background:#161b22;
+    margin:5px 0;
+    padding:10px;
+    border-radius:3px;
+    font-size:1em;
+    color:#e6edf3;
+}
+
+.project a{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#00e6ff;
+    color:#0d1117;
+    text-decoration:none;
+    border-radius:3px;
+    transition:background 0.3s ease;
+}
+
+.project a:hover{
+    background:#0088aa;
+    color:#fff;
+}
+
+.skills ul{
+    list-style-type:none;
+    padding:0;
+    text-align:center;
+}
+
+.skills li{
+    display:inline-block;
+    margin:10px;
+    padding:10px 20px;
+    background-color:#00e6ff;
+    color:#0d1117;
+    border-radius:20px;
+    font-size:1.1em;
+    cursor:pointer;
+    transition:background-color 0.3s ease;
+}
+
+.skills li:hover{
+    background-color:#0088aa;
+    color:#fff;
+}
+
+.contact p{
+    font-size:1.2em;
+    text-align:center;
+    color:#c9d1d9;
+}
+
+footer{
+    background:#161b22;
+    color:#fff;
+    text-align:center;
+    padding:20px 0;
+}
+
+.scroll-to-top{
+    position:fixed;
+    bottom:40px;
+    right:40px;
+    display:none;
+    background:#00e6ff;
+    color:#0d1117;
+    border:none;
+    padding:10px 15px;
+    border-radius:50%;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 2px 5px rgba(0,255,255,0.2);
+    transition:background 0.3s ease;
+}
+
+.scroll-to-top:hover{
+    background:#0088aa;
+    color:#fff;
+}
+
+.section-hidden{
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity 0.6s ease-out,transform 0.6s ease-out;
+}
+
+.section-visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+#darkModeToggle{
+    background:none;
+    border:none;
+    color:#00e6ff;
+    font-size:20px;
+    cursor:pointer;
+    margin-left:20px;
+}
+
+.scroll-to-top{
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 0.3s ease,visibility 0.3s ease;
+}
+
+.scroll-to-top.show{
+    opacity:1;
+    visibility:visible;
+}
+
+@media(max-width:768px){.container{width:90%;}nav .container{flex-wrap:wrap;gap:10px;}header h1{font-size:2.2em;}.profile-photo{width:180px;height:180px;}}
+
+.projects .project {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+.projects .project {
+    box-shadow: 0 0 15px rgba(0, 230, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.projects .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 230, 255, 0.6);
+}
+.project a {
+    background: linear-gradient(90deg, #00e6ff, #0088aa);
+    font-weight: bold;
+}
+.project a:hover {
+    background: linear-gradient(90deg, #0088aa, #005577);
+}
